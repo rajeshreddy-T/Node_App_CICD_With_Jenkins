@@ -25,55 +25,41 @@ how to create a github repository
 Create a github repository with your application to be deployed in the ec2 instance
  use this repository-> https://github.com/rajeshreddy-T/git-workflow-test-with-node-and-ec2  and implement the First 4 steps present in the README.md file of the repository
 
-## Step 2: Create a Jenkins Server here we are going to use the EC2 instance to host out JENKINS server
-### Step 2.1: Install Jenkins on the EC2 instance
-#### Step 2.1.1: Install Java
+## Step 2: Create a Jenkins Server here we are going to use the UBUNTU EC2 instance to host out JENKINS server
+### Step 2.1: Install Jenkins on the EC2 instance Ubuntu 22.04 AMI
 ```
-sudo yum install java-1.8.0-openjdk-devel -y
+sudo apt update
+sudo apt install openjdk-8-jdk
 ```
-#### Step 2.1.2: Install Jenkins
+### Step 2.2: Add the Jenkins repository to the system
 ```
-sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-sudo yum install jenkins -y
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 ```
-#### Step 2.1.3: Start Jenkins
+### Step 2.3: Install Jenkins
+```
+sudo apt update
+sudo apt install jenkins
+```
+### Step 2.4: Start Jenkins
 ```
 sudo systemctl start jenkins
 ```
-#### Step 2.1.4: Enable Jenkins
+### Step 2.5: Enable Jenkins
 ```
 sudo systemctl enable jenkins
 ```
-#### Step 2.1.5: Check Jenkins status
-```
-sudo systemctl status jenkins
-```
-#### Step 2.1.6: Open Jenkins in browser
-```
-http://<public-ip>:8080
-```
-#### Step 2.1.7: Unlock Jenkins
-```
-cat /var/lib/jenkins/secrets/initialAdminPassword
-```
-#### Step 2.1.8: Install suggested plugins
-#### Step 2.1.9: Create admin user
-#### Step 2.1.10: Start using Jenkins
-#### Step 2.1.11: Install Git plugin
-```
-Manage Jenkins -> Manage Plugins -> Available -> Search for Git -> Install without restart
-```
-#### Step 2.1.12: Install NodeJS plugin
-```
-Manage Jenkins -> Manage Plugins -> Available -> Search for NodeJS -> Install without restart
-```
-#### Step 2.1.13: Install AWS plugin
-```
-Manage Jenkins -> Manage Plugins -> Available -> Search for AWS -> Install without restart
-```
 
-### Step 2.2: Configure Jenkins
+
+
+### Step 2.2: install plugins && Configure Jenkins
+#### Step 2.2.1: Install plugins
+```
+Manage Jenkins -> Manage Plugins -> Available -> Git plugin -> Install without restart -> Save
+Manage Jenkins -> Manage Plugins -> Available -> NodeJS plugin -> Install without restart -> Save
+Manage Jenkins -> Manage Plugins -> Available -> AWS Credentials plugin -> Install without restart -> Save
+Manage Jenkins -> Manage Plugins -> Available -> SSH Build Agents plugin -> Install without restart -> Save
+```
 #### Step 2.2.1: Configure Git
 ```
 Manage Jenkins -> Configure System -> Global Tool Configuration -> Git -> Add Git
