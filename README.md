@@ -1,6 +1,6 @@
 <!-- CI/CD implementation with git JENKINS Automation server  to ec2 instance-->
 
-# NodeAPP_v1
+# Node_APP_CICD_With_JENKINS
 
 This is a simple NodeJS application that is used to demonstrate CI/CD implementation with git workflows.
 
