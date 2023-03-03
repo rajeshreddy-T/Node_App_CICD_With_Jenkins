@@ -188,14 +188,3 @@ npm run deploy
 Post-build Actions -> Archive the artifacts -> Files to archive: nodeapp_v1.tar.gz -> Save
 ```
 
-
-
-
-
-
-
-
-
-# Node_App_CICD_With_Jenkins
-# Node_App_CICD_With_Jenkins
-# Node_App_CICD_With_Jenkins
