@@ -8,6 +8,8 @@ This is a simple NodeJS application that is used to demonstrate CI/CD implementa
 how to create an ec2 instance
 how to create a github repository
 
+------------------------------------------------------------
+------------------------------------------------------------
 ## Steps to create a CI/CD pipeline in Jenkins
 ### Step 1: create Application to be deployed and Ec2 instance
 ### Step 2: Create a Jenkins Server here we are going to use the EC2 instance to host out JENKINS server 
@@ -17,7 +19,8 @@ how to create a github repository
 
 
 ------------------------------------------------------------
-
+------------------------------------------------------------
+------------------------------------------------------------
 ## Step 1: create Application to be deployed and Ec2 instance
 Create a github repository with your application to be deployed in the ec2 instance
  use this repository-> https://github.com/rajeshreddy-T/git-workflow-test-with-node-and-ec2  and implement the First 4 steps present in the README.md file of the repository
