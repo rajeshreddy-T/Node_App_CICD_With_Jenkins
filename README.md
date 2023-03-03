@@ -2,7 +2,7 @@
 
 # Node_APP_CICD_With_JENKINS
 
-This is a simple NodeJS application that is used to demonstrate CI/CD implementation with git workflows.
+This is a simple NodeJS application that is used to demonstrate CI/CD implementation with jenkins and EC2 instance.
 
 ## Prerequisites
 how to create an ec2 instance
