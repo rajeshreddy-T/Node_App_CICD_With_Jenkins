@@ -16,6 +16,8 @@ how to create a github repository
 ### Step 5: Create a Jenkins Job to deploy the application to the ec2 instance
 
 
+------------------------------------------------------------
+
 ## Step 1: create Application to be deployed and Ec2 instance
 Create a github repository with your application to be deployed in the ec2 instance
  use this repository-> https://github.com/rajeshreddy-T/git-workflow-test-with-node-and-ec2  and implement the First 4 steps present in the README.md file of the repository
@@ -194,5 +196,6 @@ Post-build Actions -> Archive the artifacts -> Files to archive: nodeapp_v1.tar.
 
 
 
+# Node_App_CICD_With_Jenkins
 # Node_App_CICD_With_Jenkins
 # Node_App_CICD_With_Jenkins
