@@ -29,7 +29,9 @@ Create a github repository with your application to be deployed in the ec2 insta
 ### Step 2.1: Install Jenkins on the EC2 instance Ubuntu 22.04 AMI
 ```
 sudo apt update
-sudo apt install openjdk-8-jdk
+sudo apt install openjdk-11-jdk
+sudo apt install openjdk-11-jre
+
 ```
 ### Step 2.2: Add the Jenkins repository to the system
 ```
@@ -43,13 +45,12 @@ sudo apt install jenkins
 ```
 ### Step 2.4: Start Jenkins
 ```
-sudo systemctl start jenkins
+sudo service jenkins start
 ```
 ### Step 2.5: Enable Jenkins
 ```
-sudo systemctl enable jenkins
+sudo service jenkins enable
 ```
-
 
 
 ### Step 2.2: install plugins && Configure Jenkins
