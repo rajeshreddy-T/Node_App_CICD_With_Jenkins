@@ -94,6 +94,10 @@ Source Code Management -> Git -> Repository URL -> Credentials -> Add -> Jenkins
 #### Step 2.3.3: Configure Build Triggers
 ```
 Build Triggers -> Poll SCM -> Schedule: * * * * *
+trigger with witth webhook
+
+
+
 ```
 #### Step 2.3.4: Configure Build Environment
 ```
@@ -148,10 +152,10 @@ npm run test
 ```
 New Item -> Enter an item name -> Freestyle project -> OK
 ```
-#### Step 2.5.2: Configure Source Code Management
-```
-Source Code Management -> Git -> Repository URL -> Credentials -> Add -> Jenkins -> Global credentials -> Add Credentials -> Kind: SSH Username with private key -> Username: ec2-user -> Private Key: Enter directly -> Private Key -> Passphrase: (leave blank) -> ID: git-workflow-test-with-node-and-ec2 -> Description: git-workflow-test-with-node-and-ec2 -> Add -> OK -> Save
-```
+#### Step 2.5.2: configure Source Code Management
+
+
+
 #### Step 2.5.3: Configure Build Triggers
 ```
 Build Triggers -> Poll SCM -> Schedule: * * * * *
